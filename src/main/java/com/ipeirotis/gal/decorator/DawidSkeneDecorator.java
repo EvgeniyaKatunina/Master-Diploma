@@ -63,9 +63,9 @@ public class DawidSkeneDecorator extends Decorator<DawidSkene> {
 		// the classification method puts the item. 
 		ClassificationMethod probEstimateMethod;
 		if (clasMethod.name().matches("DS_.+")) {
-			probEstimateMethod = ClassificationMethod.DS_Soft;
+			probEstimateMethod = ClassificationMethod.DS_MaxLikelihood;
 		} else if (clasMethod.name().matches("MV_.+")) {
-			probEstimateMethod = ClassificationMethod.MV_Soft;
+			probEstimateMethod = ClassificationMethod.MV_MaxLikelihood;
 		} else {
 			throw new IllegalArgumentException("Incorrect Classification Method");
 		}
